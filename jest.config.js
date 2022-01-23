@@ -100,6 +100,29 @@ module.exports = {
 
   // Use this configuration option to add custom reporters to Jest
   // reporters: undefined,
+  "reporters": [
+    "default",
+    [
+      "@reportportal/agent-js-jest",
+      {
+          "token": "00000000-0000-0000-0000-000000000000",
+          "endpoint": "http://localhost:8080/api/v1",
+          "project": "playground",
+          "launch": "example-jest",
+          "description": "CI example",
+          "attributes": [
+              {
+                  "key": "test framework",
+                  "value": "jest"
+              },
+              {
+                  "value": "level",
+                  "value": "unit"
+              },
+          ]
+      }
+    ]
+  ]
 
   // Automatically reset mock state before every test
   // resetMocks: false,

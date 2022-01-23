@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/guilhermedelemos/example-jest#readme",
   "devDependencies": {
+    "@reportportal/agent-js-jest": "^5.0.3",
     "jest": "^27.4.7"
   }
 }
